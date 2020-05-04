@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+$color: #649d66;
+
+.navcontainer {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    background-color: $color;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .nav-element {
+        padding: 7px 5%;
+        cursor: pointer;
+        &:hover  {
+            animation-duration: 0.2s;
+            animation-name: expand;
+            animation-fill-mode: forwards;
+        }
+        @keyframes expand {
+            20% { background-color: darken($color: $color, $amount: 2); }
+            100% { background-color: darken($color: $color, $amount: 25); }
+        }
+    }
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        .nav-element {
+            text-align: center;
+        }
+    }
+}

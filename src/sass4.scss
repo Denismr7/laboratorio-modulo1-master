@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+.container{
+    font-family: 'Open Sans', sans-serif;;
+    display: grid;
+    width: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 0.25fr 1fr 0.2fr 0.5fr;
+    grid-template-areas: 
+        "img"
+        "title"
+        "description"
+        "date"
+        "button";
+    background-color: #f9f9f9;
+    border: #ffacb7 solid 1px;
+    * {
+        padding: 3%;
+    }
+    .img {
+        grid-area: img;
+        padding: 0;
+        img {
+            width: 100%;
+            padding: 0;
+        }
+    }
+    .title {
+        grid-area: title;
+        font-weight: 600;
+        font-size: 1.5rem;
+        color: #6886c5;
+    }
+    .description {
+        grid-area: description;
+    }
+    .date {
+        grid-area: date;
+        font-size: smaller;
+        text-align: right;
+        color: #6886c5;
+        strong {
+            color: initial;
+        }
+        
+    }
+    .button {
+        grid-area: button;
+        justify-self: normal;
+        align-self: center;
+        text-align: center;
+        input {
+            padding: 4% 30%;
+            background-color: #6886c5;
+            color: #f9f9f9;
+            border: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            &:hover {
+                cursor: pointer;
+            }
+            &:active {
+                box-shadow: inset 0px 0px 5px 3px rgba(135,135,135,1);
+                background-color: darken($color: #6886c5, $amount: 5);
+            }
+        }
+    }
+}

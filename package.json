@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel \"src/index.html\"",
+    "startone": "parcel \"src/ejercicio1.html\"",
+    "starttwo": "parcel \"src/ejercicio2.html\"",
+    "startthree": "parcel \"src/ejercicio3.html\"",
+    "startfour": "parcel \"src/ejercicio4.html\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

@@ -1,0 +1,35 @@
+@import './themeB';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    .box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 200px;
+        margin: 5px;
+    }
+    .base {
+        background-color: $base;
+    }
+    .important {
+        background-color: $important;
+    }
+    .warning {
+        background-color: $warning;
+    }
+    .font {
+        h4 {
+            font-family: $principal-font;
+        }
+        h5 {
+            font-family: $secondary-font;
+        }
+    }
+    .shadow {
+        box-shadow: $shadow;
+    }
+}

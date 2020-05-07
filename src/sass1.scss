@@ -2,6 +2,11 @@ $base-color: #4053ff;
 $base-color2: #fc36ff;
 $base-color3: #36ff4a;
 
+@mixin applyFlex($direction) {
+    display: flex;
+    flex-direction: $direction;
+}
+
 .box {
     display: flex;
     align-items: center;
@@ -12,95 +17,50 @@ $base-color3: #36ff4a;
     border-radius: 7px 7px 7px 7px;
 }
 .container-1 {
-    display: flex;
-    flex-direction: row;
+    @include applyFlex(row);
     .base-color {
         background-color: $base-color;
     }
-    .darken1 {
-        background-color: darken($color: $base-color, $amount: 3);
+    @for $i from 1 through 4 {
+        .darken#{$i} {
+            background-color: darken($color: $base-color, $amount: $i * 5);
+        }       
     }
-    .darken2 {
-        background-color: darken($color: $base-color, $amount: 9);
-    }
-    .darken3 {
-        background-color: darken($color: $base-color, $amount: 13);
-    }
-    .darken4 {
-        background-color: darken($color: $base-color, $amount: 20);
-    }
-    .lighten1 {
-        background-color: lighten($color: $base-color, $amount: 3);
-    }
-    .lighten2 {
-        background-color: lighten($color: $base-color, $amount: 9);
-    }
-    .lighten3 {
-        background-color: lighten($color: $base-color, $amount: 13);
-    }
-    .lighten4 {
-        background-color: lighten($color: $base-color, $amount: 20);
+    @for $i from 1 through 4 {
+        .lighten#{$i} {
+            background-color: lighten($color: $base-color, $amount: $i * 5);
+        }
     }
 }
 .container-2 {
-    display: flex;
-    flex-direction: row;
+    @include applyFlex(row);
     .base-color {
         background-color: $base-color2;
     }
-    .darken1 {
-        background-color: darken($color: $base-color2, $amount: 3);
+    @for $i from 1 through 4 {
+        .darken#{$i} {
+            background-color: darken($color: $base-color2, $amount: $i * 5);
+        }
     }
-    .darken2 {
-        background-color: darken($color: $base-color2, $amount: 9);
-    }
-    .darken3 {
-        background-color: darken($color: $base-color2, $amount: 13);
-    }
-    .darken4 {
-        background-color: darken($color: $base-color2, $amount: 20);
-    }
-    .lighten1 {
-        background-color: lighten($color: $base-color2, $amount: 3);
-    }
-    .lighten2 {
-        background-color: lighten($color: $base-color2, $amount: 9);
-    }
-    .lighten3 {
-        background-color: lighten($color: $base-color2, $amount: 13);
-    }
-    .lighten4 {
-        background-color: lighten($color: $base-color2, $amount: 20);
+    @for $i from 1 through 4 {
+        .lighten#{$i} {
+            background-color: lighten($color: $base-color2, $amount: $i * 5);
+        }
     }
 }
 .container-3 {
-    display: flex;
-    flex-direction: row;
+    @include applyFlex(row);
     .base-color {
         background-color: $base-color3;
     }
-    .darken1 {
-        background-color: darken($color: $base-color3, $amount: 3);
+    @for $i from 1 through 4 {
+        .darken#{$i} {
+            background-color: darken($color: $base-color3, $amount: $i * 5);
+        }
     }
-    .darken2 {
-        background-color: darken($color: $base-color3, $amount: 9);
-    }
-    .darken3 {
-        background-color: darken($color: $base-color3, $amount: 13);
-    }
-    .darken4 {
-        background-color: darken($color: $base-color3, $amount: 20);
-    }
-    .lighten1 {
-        background-color: lighten($color: $base-color3, $amount: 3);
-    }
-    .lighten2 {
-        background-color: lighten($color: $base-color3, $amount: 9);
-    }
-    .lighten3 {
-        background-color: lighten($color: $base-color3, $amount: 13);
-    }
-    .lighten4 {
-        background-color: lighten($color: $base-color3, $amount: 20);
+    @for $i from 1 through 4 {
+        .lighten#{$i} {
+            background-color: lighten($color: $base-color3, $amount: $i * 5);
+        }
     }
 }

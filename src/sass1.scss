@@ -24,12 +24,10 @@ $base-color3: #36ff4a;
     @for $i from 1 through 4 {
         .darken#{$i} {
             background-color: darken($color: $base-color, $amount: $i * 5);
-        }       
-    }
-    @for $i from 1 through 4 {
+        }
         .lighten#{$i} {
             background-color: lighten($color: $base-color, $amount: $i * 5);
-        }
+        }       
     }
 }
 .container-2 {
@@ -41,8 +39,6 @@ $base-color3: #36ff4a;
         .darken#{$i} {
             background-color: darken($color: $base-color2, $amount: $i * 5);
         }
-    }
-    @for $i from 1 through 4 {
         .lighten#{$i} {
             background-color: lighten($color: $base-color2, $amount: $i * 5);
         }
@@ -57,8 +53,6 @@ $base-color3: #36ff4a;
         .darken#{$i} {
             background-color: darken($color: $base-color3, $amount: $i * 5);
         }
-    }
-    @for $i from 1 through 4 {
         .lighten#{$i} {
             background-color: lighten($color: $base-color3, $amount: $i * 5);
         }
